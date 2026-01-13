@@ -1,0 +1,12 @@
+{
+  "name": "junk-removal-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page for junk removal service",
+  "scripts": {
+    "dev": "npx serve ."
+  },
+  "dependencies": {
+    "resend": "^4.0.0"
+  }
+}
