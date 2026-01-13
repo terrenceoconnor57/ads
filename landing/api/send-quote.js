@@ -18,7 +18,7 @@ export default async function handler(req, res) {
 
         // Format the service name for display
         const serviceLabels = {
-            'furniture': 'Furniture Removal',
+            'furniture': 'Furniture Removal', 
             'appliances': 'Appliance Removal',
             'yard': 'Yard Waste',
             'construction': 'Construction Debris',
