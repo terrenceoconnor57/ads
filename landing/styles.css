@@ -175,16 +175,36 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     z-index: 100;
+    gap: 24px;
 }
 
 .nav-brand {
     font-family: var(--font-display);
-    font-size: 1.5rem;
-    letter-spacing: 0.05em;
+    font-size: 1.25rem;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
 }
 
 .nav-brand span {
     color: var(--color-primary);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-links a {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    transition: color var(--transition-fast);
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    color: var(--color-text);
 }
 
 .nav-cta {
@@ -197,6 +217,7 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid var(--color-border);
     border-radius: var(--radius-full);
     transition: all var(--transition-base);
+    white-space: nowrap;
 }
 
 .nav-cta:hover {
@@ -656,6 +677,22 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.9375rem;
 }
 
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links a {
+    color: var(--color-text-muted);
+    font-size: 0.9375rem;
+    transition: color var(--transition-fast);
+}
+
+.footer-links a:hover {
+    color: var(--color-text);
+}
+
 .footer-contact a {
     font-family: var(--font-display);
     font-size: 1.25rem;
@@ -700,6 +737,10 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
     .container {
         padding: 0 20px;
+    }
+    
+    .nav-links {
+        display: none;
     }
     
     .hero {
@@ -753,6 +794,11 @@ h1, h2, h3, h4, h5, h6 {
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+    
+    .footer-links {
+        flex-direction: row;
+        gap: 24px;
     }
 }
 
