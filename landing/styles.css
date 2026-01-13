@@ -717,6 +717,285 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ============================================
+   Interior Page Styles
+   ============================================ */
+.page-header {
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.page-header .nav {
+    position: relative;
+}
+
+.nav-links a.active {
+    color: var(--color-primary);
+}
+
+.page-hero {
+    padding: 120px 0 60px;
+    text-align: center;
+    background: 
+        radial-gradient(ellipse 80% 50% at 50% 0%, var(--color-primary-glow), transparent),
+        var(--color-bg);
+}
+
+.page-hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 16px;
+}
+
+.page-hero p {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+}
+
+/* Services Detail Page */
+.services-detail {
+    padding: 80px 0;
+    background: var(--color-bg-elevated);
+}
+
+.service-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 32px;
+}
+
+.service-detail-card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+}
+
+.service-detail-card .service-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.service-detail-card h2 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.service-detail-card > p {
+    color: var(--color-text-muted);
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.service-detail-card ul {
+    list-style: none;
+}
+
+.service-detail-card li {
+    padding: 8px 0;
+    padding-left: 28px;
+    position: relative;
+    color: var(--color-text-muted);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.service-detail-card li:last-child {
+    border-bottom: none;
+}
+
+.service-detail-card li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-success);
+    font-weight: bold;
+}
+
+/* How It Works Page */
+.process-detail {
+    padding: 80px 0;
+    background: var(--color-bg-elevated);
+}
+
+.process-timeline {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 48px;
+    position: relative;
+}
+
+.timeline-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 28px;
+    top: 60px;
+    bottom: -48px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--color-primary), var(--color-border));
+}
+
+.timeline-number {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    border-radius: 50%;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-content h2 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.timeline-content > p {
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.timeline-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.timeline-details .detail {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+}
+
+.timeline-details .detail svg {
+    color: var(--color-accent);
+    flex-shrink: 0;
+}
+
+/* Quote Page */
+.quote-page-section {
+    padding: 80px 0;
+    background: var(--color-bg-elevated);
+}
+
+.quote-page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.quote-page-info h2 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
+
+.phone-display-large {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+    transition: color var(--transition-base);
+}
+
+.phone-display-large:hover {
+    color: var(--color-accent);
+}
+
+.quote-page-info > p {
+    color: var(--color-text-muted);
+    margin-bottom: 40px;
+}
+
+.quote-page-benefits h3 {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-bottom: 20px;
+}
+
+.benefit-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.benefit-item svg {
+    color: var(--color-success);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.benefit-item strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.benefit-item p {
+    color: var(--color-text-muted);
+    font-size: 0.9375rem;
+    margin: 0;
+}
+
+.quote-form-large {
+    padding: 48px;
+}
+
+.quote-form-large h2 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 32px;
+}
+
+/* Page CTA */
+.page-cta {
+    padding: 80px 0;
+    text-align: center;
+    background: 
+        radial-gradient(ellipse 100% 50% at 50% 100%, var(--color-primary-glow), transparent),
+        var(--color-bg);
+}
+
+.page-cta h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin-bottom: 12px;
+}
+
+.page-cta p {
+    color: var(--color-text-muted);
+    font-size: 1.125rem;
+    margin-bottom: 32px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ============================================
    Mobile Responsive
    ============================================ */
 @media (max-width: 900px) {
@@ -731,6 +1010,42 @@ h1, h2, h3, h4, h5, h6 {
     
     .quote-benefits {
         align-items: center;
+    }
+    
+    .quote-page-wrapper {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+    
+    .quote-page-info {
+        text-align: center;
+    }
+    
+    .phone-display-large {
+        justify-content: center;
+    }
+    
+    .quote-page-benefits {
+        text-align: left;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .timeline-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .timeline-item:not(:last-child)::after {
+        display: none;
+    }
+    
+    .timeline-number {
+        margin: 0 auto 20px;
+    }
+    
+    .timeline-details {
+        justify-content: center;
     }
 }
 

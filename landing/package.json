@@ -2,6 +2,7 @@
   "name": "junk-removal-landing",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "Landing page for junk removal service",
   "scripts": {
     "dev": "npx serve ."
