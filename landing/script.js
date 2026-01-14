@@ -47,6 +47,10 @@ document.addEventListener('DOMContentLoaded', function() {
             if (response.ok) {
                 showMessage('Thanks! We\'ll get back to you within the hour.', 'success');
                 form.reset();
+                // Fire Google Ads conversion tracking
+                if (typeof gtag_report_conversion === 'function') {
+                    gtag_report_conversion();
+                }
             } else {
                 showMessage(result.error || 'Something went wrong. Please try again or call us directly.', 'error');
             }
